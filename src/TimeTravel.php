@@ -29,9 +29,9 @@ class TimeTravel
     /**
      * @return DateTime
      */
-    public function setStart()
+    public function setStart(DateTime $start)
     {
-        return $start = $this->start;
+        $this->start = $start;
     }
 
     /**
@@ -42,12 +42,13 @@ class TimeTravel
         return $this->end;
     }
 
+
     /**
-     * @return DateTime
+     * @param DateTime $end
      */
-    public function setEnd()
+    public function setEnd(DateTime $end)
     {
-        return  $end =$this->end;
+        $this->end = $end;
     }
 
     /**
@@ -86,8 +87,7 @@ class TimeTravel
     public function findDate( DateInterval  $interval) :string
     {
         $date = $this->start->sub($interval)->format('Y-m-d H:i:s');
-        $message = $date;
-        return $message;
+        return $date;
     }
 
 

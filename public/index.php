@@ -27,6 +27,7 @@
 
 <?php
     $start= new DateTime('1985-12-31');
+    $timeTravel->setStart($start);
     $interval = new DateInterval('PT1000000000S');
 ?>
 <p>
